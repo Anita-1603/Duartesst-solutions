@@ -1,87 +1,393 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Duarte SS Solutions - Anita Duarte</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f2f6ff;color:#222}
-header{background:#0a2a6b;color:white;padding:40px 20px;text-align:center}
-header h1{font-size:32px}
-header p{margin-top:10px;font-size:18px;opacity:.9}
-.badge{background:#25D366;display:inline-block;padding:8px 16px;border-radius:20px;margin-top:15px;font-weight:bold}
-section{max-width:900px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-h2{color:#0a2a6b;margin-bottom:15px}
-video{width:100%;border-radius:12px;background:#000}
-.servicios{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.card{background:#eef3ff;padding:18px;border-radius:12px}
-.card b{color:#0a2a6b}
-input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
-button{background:#25D366;color:white;border:0;padding:14px;width:100%;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer}
-#resultado{background:#e8fff0;padding:15px;border-radius:10px;margin-top:10px;font-weight:bold;text-align:center}
-.contacto{text-align:center}
-.contacto a{display:inline-block;background:#0a2a6b;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;margin:5px}
-@media(max-width:600px){.servicios{grid-template-columns:1fr} header h1{font-size:26px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DuarteSST Solution | Consultoría en Seguridad y Salud en el Trabajo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<header>
-<h1>✨ Duarte SS Solutions ✨</h1>
-<p>Soluciones contables y administrativas para tu negocio</p>
-<div class="badge">Anita Duarte Andrade - Barranquilla</div>
-</header>
+  <!-- 1. ENCABEZADO Y MENÚ DE NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="contenedor-header">
+      <div class="logo">
+        <span class="icono-escudo">🛡️</span>
+        <div>
+          <h2>Duarte<span>SST</span> Solution</h2>
+          <small>Prevención • Cumplimiento • Bienestar</small>
+        </div>
+      </div>
 
-<section>
-<h2>🎥 Conócenos</h2>
-<video controls poster="">
-<source src="video.mp4" type="video/mp4">
-Tu navegador no soporta video.
-</video>
-<p style="margin-top:10px">Te ayudamos a organizar tus cuentas, facturación y administración sin estrés.</p>
-</section>
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#contacto" class="btn-nav">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>💼 Nuestros Servicios</h2>
-<div class="servicios">
-<div class="card"><b>📊 Contabilidad</b><br>Organización de cuentas, libros y reportes mensuales.</div>
-<div class="card"><b>🧾 Facturación</b><br>Facturación electrónica, cuentas de cobro y control.</div>
-<div class="card"><b>💰 Impuestos</b><br>Declaraciones, RUT, cámara de comercio y trámites DIAN.</div>
-<div class="card"><b>🏢 Administración</b><br>Gestión de tu negocio, inventarios y nómina.</div>
-</div>
-</section>
+  <!-- 2. PORTADA PRINCIPAL -->
+  <section id="inicio" class="portada">
+    <div class="portada-contenedor">
+      <div class="portada-texto">
+        <span class="etiqueta-hero">SG-SST • NORMATIVIDAD COLOMBIANA</span>
+        <h1>Protegemos el talento humano y blindamos legalmente tu empresa</h1>
+        <p>
+          En <strong>DuarteSST Solution</strong> diseñamos, implementamos y auditamos Sistemas de Gestión de Seguridad y Salud en el Trabajo (Decreto 1072 de 2015 y Resolución 0312) adaptados a la realidad operativa y administrativa de tu negocio.
+        </p>
+        <div class="portada-botones">
+          <a href="#servicios" class="boton-principal">Explorar Servicios</a>
+          <a href="#calculadora" class="boton-secundario">Cotizar SG-SST</a>
+        </div>
+      </div>
 
-<section>
-<h2>🧮 Calculadora de Servicios</h2>
-<select id="servicio">
-<option value="150000">Contabilidad básica - $150.000</option>
-<option value="80000">Facturación - $80.000</option>
-<option value="120000">Impuestos / Declaración - $120.000</option>
-<option value="200000">Administración completa - $200.000</option>
-</select>
-<input type="number" id="meses" value="1" min="1" placeholder="¿Cuántos meses?">
-<button onclick="calcular()">Calcular Total</button>
-<div id="resultado">Total: $150.000</div>
-</section>
+      <div class="portada-imagen">
+        <img src="img/logo.jpeg" alt="Gestión integral de Seguridad y Salud en el Trabajo SG-SST">
+      </div>
+    </div>
+  </section>
 
-<section class="contacto">
-<h2>📞 Contáctanos</h2>
-<p>¿Tienes preguntas? Escríbenos, te respondemos rápido.</p>
-<br>
-<a href="https://wa.me/573001234567">💬 WhatsApp</a>
-<a href="mailto:anceduan_1603@hotmail.com">📧 Correo</a>
-<p style="margin-top:15px">📍 Barranquilla, Atlántico - Colombia</p>
-</section>
+  <!-- 3. SECCIÓN SOBRE NOSOTROS -->
+  <section id="nosotros" class="sobre-nosotros">
+    <div class="nosotros-contenedor">
+      <div class="nosotros-galeria">
+        <img src="img/G.jpeg" alt="Asesoría gerencial en Seguridad y Salud en el Trabajo" class="img-principal-nosotros">
+        <img src="img/TC.jpeg" alt="Charla de seguridad en campo con cuadrilla operativa" class="img-secundaria-nosotros">
+      </div>
 
-<script>
-function calcular(){
-let s=document.getElementById('servicio').value;
-let m=document.getElementById('meses').value||1;
-let total=s*m;
-document.getElementById('resultado').innerText='Total: $'+total.toLocaleString('es-CO')+' por '+m+' mes(es)';
-}
+      <div class="nosotros-contenido">
+        <span class="etiqueta-seccion">SOBRE NOSOTROS</span>
+        <h2>Liderazgo técnico y experiencia real en campo y oficina</h2>
+        <p>
+          <strong>DuarteSST Solution</strong> nace en Barranquilla con el propósito de transformar la Seguridad y Salud en el Trabajo de un simple requisito documental a una cultura preventiva viva, práctica y medible.
+        </p>
+        <p>
+          Acompañamos tanto a personal operativo en obra y almacén como a equipos administrativos, integrando inspecciones de seguridad, control de Elementos de Protección Personal (EPP) y gestión de riesgos laborales con enfoque humanizado y rigor normativo.
+        </p>
+        <ul class="lista-diferenciales">
+          <li>✔️ Acompañamiento presencial en campo y auditoría documental.</li>
+          <li>✔️ Capacitaciones dinámicas adaptadas a cada nivel de riesgo (I al V).</li>
+          <li>✔️ Cumplimiento garantizado ante visitas del Ministerio del Trabajo y ARL.</li>
+        </ul>
+        <a href="#servicios" class="boton-principal">Conoce nuestras soluciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CATÁLOGO DE PRODUCTOS O SERVICIOS -->
+  <section id="servicios" class="catalogo">
+    <div class="seccion-encabezado">
+      <span class="etiqueta-seccion">PORTAFOLIO PROFESIONAL</span>
+      <h2>Nuestros Servicios Especializados</h2>
+      <p>Soluciones integrales diseñadas según el tamaño y nivel de riesgo de tu organización.</p>
+    </div>
+
+    <div class="grid-servicios">
+      <!-- Servicio 1 -->
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-img">
+          <img src="img/I.jpeg"  alt="Diseño e Implementación del SG-SST">
+          <span class="badge-riesgo">Estándares Mínimos</span>
+        </div>
+        <div class="tarjeta-cuerpo">
+          <h3>Diseño e Implementación SG-SST</h3>
+          <p>Evaluación inicial, matriz de peligros (GTC 45), plan de trabajo anual, políticas y conformación de COPASST y Comité de Convivencia.</p>
+          <div class="tarjeta-pie">
+            <span class="precio">Desde $650.000</span>
+            <a href="#calculadora" class="boton-tarjeta">Cotizar servicio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Servicio 2 -->
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-img">
+          <img src="img/C.jpeg" alt="Gestión de EPP y Capacitación Operativa">
+          <span class="badge-riesgo">Prevención Activa</span>
+        </div>
+        <div class="tarjeta-cuerpo">
+          <h3>Matriz de EPP y Capacitación</h3>
+          <p>Selección técnica de Elementos de Protección Personal para personal operativo y administrativo, charlas de 5 minutos y talleres prácticos.</p>
+          <div class="tarjeta-pie">
+            <span class="precio">$280.000 / jornada</span>
+            <a href="#calculadora" class="boton-tarjeta">Cotizar servicio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Servicio 3 -->
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-img">
+          <img src="img/IN.jpeg" alt="Inspecciones de Seguridad y Control de Peligros">
+          <span class="badge-riesgo">Control en Campo</span>
+        </div>
+        <div class="tarjeta-cuerpo">
+          <h3>Inspecciones y Auditoría en Campo</h3>
+          <p>Identificación de peligros físicos, químicos, mecánicos, locativos, ergonómicos y psicosociales con plan de acción correctivo.</p>
+          <div class="tarjeta-pie">
+            <span class="precio">$350.000 / visita</span>
+            <a href="#calculadora" class="boton-tarjeta">Cotizar servicio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Servicio 4 -->
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-img">
+          <img src="img/CH.jpeg" alt="Plan de Emergencias y Prevención de Riesgos">
+          <span class="badge-riesgo">Gestión del Riesgo</span>
+        </div>
+        <div class="tarjeta-cuerpo">
+          <h3>Plan de Prevención y Emergencias</h3>
+          <p>Análisis de vulnerabilidad, conformación de brigadas de emergencia, señalización normativa y simulacros de evacuación empresarial.</p>
+          <div class="tarjeta-pie">
+            <span class="precio">$480.000</span>
+            <a href="#calculadora" class="boton-tarjeta">Cotizar servicio</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN DE PROMOCIONES O PAQUETES DESTACADOS -->
+  <section id="promociones" class="promociones">
+    <div class="seccion-encabezado claro">
+      <span class="etiqueta-promo">BENEFICIOS EMPRESARIALES</span>
+      <h2>Paquetes y Promociones Vigentes</h2>
+      <p>Optimiza tu presupuesto anual de seguridad laboral con nuestros planes integrales.</p>
+    </div>
+
+    <div class="contenedor-promociones">
+      <!-- Promoción 1 -->
+      <article class="tarjeta-promocion">
+        <img src="img/PI.jpeg" alt="Paquete Pyme Segura">
+        <div class="contenido-promocion">
+          <span class="descuento">20% DTO</span>
+          <h3>Paquete Pyme Segura (1 a 10 trabajadores)</h3>
+          <p>Incluye evaluación inicial de estándares mínimos, matriz de peligros y 2 capacitaciones certificadas para tu equipo.</p>
+          <a href="#calculadora" class="boton-promo">Calcular con descuento</a>
+        </div>
+      </article>
+
+      <!-- Promoción 2 -->
+      <article class="tarjeta-promocion">
+        <img src="img/di.avif" alt="Diagnóstico Inicial Gratuito">
+        <div class="contenido-promocion">
+          <span class="descuento">BONO ESPECIAL</span>
+          <h3>Diagnóstico Documental sin Costo</h3>
+          <p>Al contratar la administración mensual de tu SG-SST, recibe gratis la auditoría de cumplimiento de la Resolución 0312.</p>
+          <a href="#contacto" class="boton-promo">Solicitar diagnóstico</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. SECCIÓN DE CALCULADORA -->
+  <section id="calculadora" class="seccion-calculadora">
+    <div class="seccion-encabezado">
+      <span class="etiqueta-seccion">HERRAMIENTA DE ESTIMACIÓN</span>
+      <h2>Calcula el valor de tu asesoría SST</h2>
+      <p>Selecciona el servicio, el número de trabajadores o jornadas y estima tu inversión.</p>
+    </div>
+
+    <div class="calculadora-contenedor">
+
+      <!-- FORMULARIO CONECTADO A PYTHON -->
+      <form class="calculadora-formulario" onsubmit="return false;">
+        <h3>Datos de tu empresa</h3>
+
+        <label for="servicio-calc">Selecciona un servicio:</label>
+        <select id="servicio-calc" name="servicio" required>
+          <option value="">-- Elige una solución SST --</option>
+          <option value="650000">Diseño e Implementación SG-SST ($650.000)</option>
+          <option value="280000">Matriz de EPP y Capacitación ($280.000)</option>
+          <option value="350000">Inspecciones y Auditoría en Campo ($350.000)</option>
+          <option value="480000">Plan de Prevención y Emergencias ($480.000)</option>
+        </select>
+
+        <label for="cantidad-calc">Cantidad de sedes / jornadas:</label>
+        <input
+          type="number"
+          id="cantidad-calc"
+          name="cantidad"
+          placeholder="Ej: 1"
+          min="1"
+          value="1"
+          required
+        >
+
+        <label for="riesgo-calc">Nivel de riesgo ARL predominante:</label>
+        <select id="riesgo-calc" name="riesgo" required>
+          <option value="1">Riesgo I - II (Administrativo / Comercial)</option>
+          <option value="1.15">Riesgo III (Manufactura / Logística)</option>
+          <option value="1.30">Riesgo IV - V (Construcción / Alto Riesgo)</option>
+        </select>
+
+        <label for="codigo-calc">Código promocional (opcional):</label>
+        <input
+          type="text"
+          id="codigo-calc"
+          name="codigo"
+          placeholder="Ej: PYME20"
+        >
+
+        <button type="submit" class="boton-calcular">
+          Calcular inversión
+        </button>
+
+      </form>
+
+      <div class="resultado-calculadora">
+        <div class="icono-calc">📊</div>
+        <h3>Resumen de cotización</h3>
+        <p>Servicio seleccionado: <strong>Pendiente de selección</strong></p>
+        <p>Modalidad: <strong>Presencial / Híbrida</strong></p>
+        <hr>
+        <p class="label-total">Inversión estimada:</p>
+        <span class="valor-total">$0 COP</span>
+        <p class="mensaje-calculadora">
+          Ingresa los parámetros de tu empresa y presiona <strong>"Calcular inversión"</strong> para visualizar el estimado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="seccion-contacto">
+    <div class="seccion-encabezado">
+      <span class="etiqueta-seccion">ESTAMOS PARA ASESORARTE</span>
+      <h2>¡Hablemos de seguridad laboral!</h2>
+      <p>Agenda una visita técnica o resuelve tus inquietudes normativas con nosotros.</p>
+    </div>
+
+    <div class="contacto-contenedor">
+      <div class="contacto-informacion">
+        <h3>Información directa</h3>
+
+        <div class="dato-contacto">
+          <h4>📍 Ubicación</h4>
+          <p>Barranquilla, Atlántico — Colombia (Cobertura regional y nacional)</p>
+        </div>
+
+        <div class="dato-contacto">
+          <h4>📱 Teléfono / WhatsApp</h4>
+          <p><a href="https://wa.me/573022083319" target="_blank">+57 302 208 3319</a></p>
+        </div>
+
+        <div class="dato-contacto">
+          <h4>✉️ Correo electrónico</h4>
+          <p><a href="mailto:anaduarte.160383@gmail.com">anaduarte.160383@gmail.com</a></p>
+        </div>
+
+        <div class="dato-contacto">
+          <h4>🕒 Horario de atención</h4>
+          <p>Lunes a viernes: 7:30 a. m. – 6:00 p. m. | Sábados: 8:00 a. m. – 1:00 p. m.</p>
+        </div>
+      </div>
+
+      <div class="contacto-formulario">
+        <h3>Envíanos tu consulta</h3>
+        <form>
+          <label for="nombre">Nombre o Empresa:</label>
+          <input type="text" id="nombre" placeholder="Escribe tu nombre o razón social" required>
+
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" placeholder="correo@tuempresa.com" required>
+
+          <label for="mensaje">¿Qué servicio SST necesitas?</label>
+          <textarea id="mensaje" rows="4" placeholder="Cuéntanos cuántos trabajadores tiene tu empresa y en qué podemos apoyarte..." required></textarea>
+
+          <button type="button" class="boton-contacto">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="footer-contenedor">
+      <div class="footer-marca">
+        <h3>Duarte<span>SST</span> Solution</h3>
+        <p>Especialistas en Seguridad y Salud en el Trabajo. Comprometidos con entornos laborales seguros, saludables y productivos.</p>
+      </div>
+
+      <div class="footer-enlaces">
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#calculadora">Calculadora</a>
+      </div>
+
+      <div class="footer-redes">
+        <h4>Conecta con nosotros</h4>
+        <div class="redes-links">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>© 2026 DuarteSST Solution. Todos los derechos reservados. | Barranquilla, Colombia.</p>
+    </div>
+  </footer>
+
+</body><script>
+const PRECIOS = {
+  "diseno": 650000,
+  "epp": 280000,
+  "inspecciones": 350000,
+  "emergencias": 480000
+  };
+const form = document.querySelector('#calculadora form') || document.querySelector('form');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  const selects = form.querySelectorAll('select');
+  const selectServicio = selects[0];
+  const selectRiesgo = selects[1];
+  const cantidadInput = form.querySelector('input[type="number"]');
+  const cantidad = parseInt(cantidadInput.value) || 1;
+  const trabajadores = cantidad;
+  const sedes = 1;
+  const textoOpcion = selectServicio.options[selectServicio.selectedIndex].text;
+  const precioBase = parseInt(selectServicio.value) || 0;
+  let factorRiesgo = 1;
+  const riesgo = selectRiesgo ? selectRiesgo.value : '';
+  if(riesgo.includes('Medio')) factorRiesgo = 1.15;
+  if(riesgo.includes('Alto')) factorRiesgo = 1.30;
+  if(riesgo.includes('Critico') || riesgo.includes('Crítico')) factorRiesgo = 1.50;
+
+  const factorSedes = 1 + (sedes - 1) * 0.20;
+
+  let subtotal = precioBase * trabajadores * factorRiesgo * factorSedes;
+  let descuento = 0;
+  if(false){
+    descuento = subtotal * 0.10;
+  }
+  const total = subtotal - descuento;
+
+  const resultado = document.querySelector('.resultado-calculadora') || document.querySelector('#resultado');
+  if(resultado){
+    resultado.innerHTML = '<p>Servicio: ' + textoOpcion + '</p>' +
+      '<p>Trabajadores: ' + trabajadores + ' | Sedes: ' + sedes + ' | Riesgo: ' + (selectRiesgo ? selectRiesgo.value : '') + '</p>' +
+      (descuento > 0 ? '<p>Descuento SST10: -$' + Math.round(descuento).toLocaleString('es-CO') + '</p>' : '') +
+      '<h3>$' + Math.round(total).toLocaleString('es-CO') + ' COP</h3>';
+  }
+});
 </script>
-
-</body>
+<div style="text-align:center; padding:30px 15px; background:#f2f2f2;">
+<h2 style="color:#1a3a5f;">¿Qué es el SG-SST?</h2>
+<p>Mira este video para entender por qué tu empresa lo necesita:</p>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Gg9XUYIun9c" title="SG-SST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width:560px; border-radius:10px;"></iframe>
+</div>
+<a href="https://wa.me/573022083319?text=Hola,%20quiero%20cotizar%20un%20servicio%20SST" target="_blank" style="position:fixed; bottom:20px; right:20px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:9999;"><svg width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.87.52 3.62 1.42 5.12L2 22l4.96-1.38A9.9 9.9 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.15 14.12c-.22.62-1.28 1.18-1.78 1.2-.47.02-.53.37-3.35-.78-2.82-1.16-4.62-3.99-4.76-4.17-.14-.18-1.14-1.52-1.14-2.9 0-1.38.72-2.05 1-2.34.27-.28.6-.36.8-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.02.53-.1.2-.16.33-.31.51-.15.18-.32.4-.46.54-.15.15-.31.31-.13.61.18.3.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.48 1.53.3.15.47.13.64-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.78.84 2.08.99.3.15.5.22.57.35.07.13.07.75-.15 1.37z"/></svg></a>
 </html>
