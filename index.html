@@ -3,80 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DuarteSST Solution | Consultoría en Seguridad y Salud en el Trabajo</title>
-<link rel="stylesheet" href="css/styles.css">
+<title>Duarte SS Solutions - Anita Duarte</title>
 <style>
-.calc-box{background:#fff;padding:22px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);max-width:520px;margin:20px auto;text-align:left}
-.calc-box label{font-weight:700;display:block;margin-top:12px}
-.calc-box input,.calc-box select{width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-top:6px}
-.calc-box button{width:100%;padding:14px;border:0;border-radius:12px;background:#0f766e;color:#fff;font-weight:800;margin-top:16px;cursor:pointer}
-#resultadoCalc{background:#ecfdf5;padding:14px;border-radius:12px;margin-top:14px;font-weight:700}
-.video-box{max-width:720px;margin:20px auto}
-.video-box video{width:100%;border-radius:16px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f2f6ff;color:#222}
+header{background:#0a2a6b;color:white;padding:40px 20px;text-align:center}
+header h1{font-size:32px}
+header p{margin-top:10px;font-size:18px;opacity:.9}
+.badge{background:#25D366;display:inline-block;padding:8px 16px;border-radius:20px;margin-top:15px;font-weight:bold}
+section{max-width:900px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+h2{color:#0a2a6b;margin-bottom:15px}
+video{width:100%;border-radius:12px;background:#000}
+.servicios{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{background:#eef3ff;padding:18px;border-radius:12px}
+.card b{color:#0a2a6b}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
+button{background:#25D366;color:white;border:0;padding:14px;width:100%;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer}
+#resultado{background:#e8fff0;padding:15px;border-radius:10px;margin-top:10px;font-weight:bold;text-align:center}
+.contacto{text-align:center}
+.contacto a{display:inline-block;background:#0a2a6b;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;margin:5px}
+@media(max-width:600px){.servicios{grid-template-columns:1fr} header h1{font-size:26px}}
 </style>
 </head>
 <body>
-<header class="encabezado">
-<div class="contenedor-header">
-<div class="logo"><span class="icono-escudo">🛡️</span><div><h2>Duarte<span>SST</span> Solution</h2><small>Prevención • Cumplimiento • Bienestar</small></div></div>
-<nav><a href="#inicio">Inicio</a> <a href="#calculadora">Calculadora</a> <a href="#servicios">Servicios</a> <a href="#contacto">Contacto</a></nav>
-</div>
+
+<header>
+<h1>✨ Duarte SS Solutions ✨</h1>
+<p>Soluciones contables y administrativas para tu negocio</p>
+<div class="badge">Anita Duarte Andrade - Barranquilla</div>
 </header>
 
-<section id="inicio" style="text-align:center;padding:40px 16px">
-<h1>Protegemos el talento humano y blindamos legalmente tu empresa</h1>
-<p>Consultoría SG-SST, capacitaciones y gestión HSEQ en Barranquilla y toda Colombia.</p>
-<a href="https://wa.me/573022083319" style="background:#25D366;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:800;display:inline-block;margin-top:12px">📲 Cotizar por WhatsApp</a>
-<div class="video-box">
-<video controls poster="img/portada.jpg"><source src="img/video-presentacion.mp4" type="video/mp4">Tu navegador no soporta video.</video>
-<p>Conoce cómo trabajamos en DuarteSST Solution</p>
+<section>
+<h2>🎥 Conócenos</h2>
+<video controls poster="">
+<source src="video.mp4" type="video/mp4">
+Tu navegador no soporta video.
+</video>
+<p style="margin-top:10px">Te ayudamos a organizar tus cuentas, facturación y administración sin estrés.</p>
+</section>
+
+<section>
+<h2>💼 Nuestros Servicios</h2>
+<div class="servicios">
+<div class="card"><b>📊 Contabilidad</b><br>Organización de cuentas, libros y reportes mensuales.</div>
+<div class="card"><b>🧾 Facturación</b><br>Facturación electrónica, cuentas de cobro y control.</div>
+<div class="card"><b>💰 Impuestos</b><br>Declaraciones, RUT, cámara de comercio y trámites DIAN.</div>
+<div class="card"><b>🏢 Administración</b><br>Gestión de tu negocio, inventarios y nómina.</div>
 </div>
 </section>
 
-<section id="calculadora" style="text-align:center;padding:20px 16px">
-<h2>🧮 Calculadora SG-SST</h2>
-<p>Calcula en 10 segundos cuánto te costaría tener tu SG-SST al día.</p>
-<div class="calc-box">
-<label>¿Cuántos trabajadores tienes?</label>
-<input type="number" id="trabajadores" value="10" min="1">
-<label>¿Qué necesitas?</label>
+<section>
+<h2>🧮 Calculadora de Servicios</h2>
 <select id="servicio">
-<option value="150000">Implementación SG-SST - $150.000 / trabajador</option>
-<option value="80000">Capacitación y charlas - $80.000 / trabajador</option>
-<option value="250000">Auditoría completa - $250.000 / trabajador</option>
-<option value="120000">Diseño de plan de emergencias - $120.000 / trabajador</option>
+<option value="150000">Contabilidad básica - $150.000</option>
+<option value="80000">Facturación - $80.000</option>
+<option value="120000">Impuestos / Declaración - $120.000</option>
+<option value="200000">Administración completa - $200.000</option>
 </select>
-<button onclick="calcular()">Calcular mi inversión</button>
-<div id="resultadoCalc">Tu inversión estimada aparecerá aquí.</div>
-<p style="font-size:13px">* Valor de referencia. El valor final depende de tu empresa. Escríbenos para una cotización exacta.</p>
-<a href="https://wa.me/573022083319?text=Hola%20Ana,%20hice%20la%20calculadora%20y%20quiero%20cotizar" style="display:block;text-align:center;background:#25D366;color:#fff;padding:12px;border-radius:10px;text-decoration:none;font-weight:800">Enviar resultado por WhatsApp</a>
-</div>
+<input type="number" id="meses" value="1" min="1" placeholder="¿Cuántos meses?">
+<button onclick="calcular()">Calcular Total</button>
+<div id="resultado">Total: $150.000</div>
 </section>
 
-<section id="servicios" style="text-align:center;padding:20px 16px">
-<h2>Nuestros Servicios</h2>
-<p>✅ Implementación SG-SST &nbsp; ✅ Capacitaciones &nbsp; ✅ Inspecciones &nbsp; ✅ Investigación de AT &nbsp; ✅ COPASST &nbsp; ✅ Gestión HSEQ</p>
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px">
-<img src="img/foto1.jpg" style="width:280px;border-radius:14px" alt="Capacitación SST">
-<img src="img/foto2.jpg" style="width:280px;border-radius:14px" alt="Inspección SST">
-<img src="img/foto3.jpg" style="width:280px;border-radius:14px" alt="Equipo DuarteSST">
-</div>
-<p style="font-size:13px">Si tus fotos tienen otro nombre, me dices y lo cambiamos. Por ahora puse foto1, foto2, foto3.</p>
-</section>
-
-<section id="contacto" style="text-align:center;padding:30px 16px">
-<h2>Contacto</h2>
-<p><b>Ana Duarte</b> - Tecnóloga HSEQ | Técnica SST<br>Barranquilla, Atlántico<br>📞 302 208 3319<br>✉️ anaduarte.160383@gmail.com</p>
-<a href="https://wa.me/573022083319" style="background:#0f766e;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:800;display:inline-block">Hablar con Ana ahora</a>
+<section class="contacto">
+<h2>📞 Contáctanos</h2>
+<p>¿Tienes preguntas? Escríbenos, te respondemos rápido.</p>
+<br>
+<a href="https://wa.me/573001234567">💬 WhatsApp</a>
+<a href="mailto:anceduan_1603@hotmail.com">📧 Correo</a>
+<p style="margin-top:15px">📍 Barranquilla, Atlántico - Colombia</p>
 </section>
 
 <script>
 function calcular(){
-let t = document.getElementById('trabajadores').value || 1;
-let v = document.getElementById('servicio').value;
-let total = t * v;
-document.getElementById('resultadoCalc').innerHTML = 'Para '+t+' trabajadores, tu inversión estimada es: <br><span style="font-size:24px">$'+total.toLocaleString('es-CO')+' COP</span>';
+let s=document.getElementById('servicio').value;
+let m=document.getElementById('meses').value||1;
+let total=s*m;
+document.getElementById('resultado').innerText='Total: $'+total.toLocaleString('es-CO')+' por '+m+' mes(es)';
 }
 </script>
+
 </body>
 </html>
